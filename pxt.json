@@ -19,7 +19,7 @@
         "branch": "v0.13.64",
         "tag": "v0.13.64",
         "commits": "https://github.com/microsoft/pxt-maker/commits/b86c87220dda3364e856c4ebf56fd8084ccd1481",
-        "target": "0.13.67",
+        "target": "0.14.10",
         "pxt": "6.6.7",
         "targetId": "maker"
     },
