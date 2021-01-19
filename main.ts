@@ -7,6 +7,16 @@ matrixKeypad.keypad.onEvent(3, 3, MatrixKeypadButtonEvent.Click, function () {
     DriverCommand = 1
     NUMFLASH = 1
 })
+matrixKeypad.keypad.onEvent(1, 2, MatrixKeypadButtonEvent.Click, function () {
+    light.setPixelColor(17, 0xffff00)
+    pause(100)
+    keyboard.type("t")
+    pause(500)
+    keyboard.type("#")
+    keyboard.type("lf rf lr rr")
+    pause(100)
+    enter()
+})
 matrixKeypad.keypad.onEvent(4, 3, MatrixKeypadButtonEvent.Click, function () {
     keyboard.type("t")
     light.setPixelColor(28, 0xffff00)
@@ -15,6 +25,16 @@ matrixKeypad.keypad.onEvent(4, 3, MatrixKeypadButtonEvent.Click, function () {
     keyboard.type("waveby")
     DriverCommand = 1
     NUMFLASH = 1
+})
+matrixKeypad.keypad.onEvent(0, 2, MatrixKeypadButtonEvent.Click, function () {
+    light.setPixelColor(16, 0xffff00)
+    pause(100)
+    keyboard.type("t")
+    pause(500)
+    keyboard.type("#")
+    keyboard.type("fr")
+    pause(100)
+    enter()
 })
 matrixKeypad.keypad.onEvent(0, 3, MatrixKeypadButtonEvent.Click, function () {
     keyboard.type("t")
@@ -32,6 +52,15 @@ matrixKeypad.keypad.onEvent(7, 1, MatrixKeypadButtonEvent.Up, function () {
         light.setPixelColor(15, 0x0000ff)
         keyboard.type("0")
         light.setPixelColor(7, 0xff0000)
+    }
+})
+matrixKeypad.keypad.onEvent(2, 1, MatrixKeypadButtonEvent.Click, function () {
+    if (Windshield == 0) {
+        Windshield = 1
+        ws()
+    } else {
+        Windshield = 0
+        ws()
     }
 })
 matrixKeypad.keypad.onEvent(4, 1, MatrixKeypadButtonEvent.Up, function () {
@@ -94,6 +123,27 @@ matrixKeypad.keypad.onEvent(3, 0, MatrixKeypadButtonEvent.Click, function () {
     pause(100)
     enter()
 })
+function ws () {
+    if (Windshield == 1) {
+        light.setPixelColor(10, 0xffff00)
+        pause(100)
+        keyboard.type("t")
+        pause(500)
+        keyboard.type("#")
+        keyboard.type("ws")
+        keyboard.functionKey(KeyboardFunctionKey.Enter, KeyboardKeyEvent.Press)
+        keyboard.functionKey(KeyboardFunctionKey.Esc, KeyboardKeyEvent.Press)
+    } else {
+        light.setPixelColor(10, 0x000000)
+        pause(100)
+        keyboard.type("t")
+        pause(500)
+        keyboard.type("#")
+        keyboard.type("!ws")
+        keyboard.functionKey(KeyboardFunctionKey.Enter, KeyboardKeyEvent.Press)
+        keyboard.functionKey(KeyboardFunctionKey.Esc, KeyboardKeyEvent.Press)
+    }
+}
 matrixKeypad.keypad.onEvent(5, 2, MatrixKeypadButtonEvent.Up, function () {
     if (DriverCommand == 1) {
         NUMFLASH = 0
@@ -111,12 +161,12 @@ function enter () {
     light.setAll(0x000000)
 }
 matrixKeypad.keypad.onEvent(2, 2, MatrixKeypadButtonEvent.Click, function () {
-    light.setPixelColor(20, 0xffff00)
+    light.setPixelColor(18, 0xffff00)
     pause(100)
     keyboard.type("t")
     pause(500)
     keyboard.type("#")
-    keyboard.type("fuel 10g")
+    keyboard.type("fuel 2g")
     pause(100)
     enter()
 })
@@ -221,6 +271,7 @@ matrixKeypad.keypad.onEvent(6, 3, MatrixKeypadButtonEvent.Click, function () {
 function numLED () {
 	
 }
+let Windshield = 0
 let NUMFLASH = 0
 let DriverCommand = 0
 DriverCommand = 1
