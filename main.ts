@@ -1,6 +1,6 @@
 matrixKeypad.keypad.onEvent(3, 3, MatrixKeypadButtonEvent.Click, function () {
     keyboard.type("t")
-    light.setPixelColor(27, 0xffff00)
+    light.setPixelColor(27, 0x007fff)
     pause(100)
     keyboard.type("!")
     keyboard.type("clear")
@@ -19,7 +19,7 @@ matrixKeypad.keypad.onEvent(1, 2, MatrixKeypadButtonEvent.Click, function () {
 })
 matrixKeypad.keypad.onEvent(4, 3, MatrixKeypadButtonEvent.Click, function () {
     keyboard.type("t")
-    light.setPixelColor(28, 0xffff00)
+    light.setPixelColor(28, 0x007fff)
     pause(100)
     keyboard.type("!")
     keyboard.type("waveby")
@@ -199,7 +199,7 @@ matrixKeypad.keypad.onEvent(4, 0, MatrixKeypadButtonEvent.Up, function () {
 })
 matrixKeypad.keypad.onEvent(5, 3, MatrixKeypadButtonEvent.Click, function () {
     keyboard.type("t")
-    light.setPixelColor(29, 0xffff00)
+    light.setPixelColor(29, 0x007fff)
     pause(100)
     keyboard.type("!")
     keyboard.type("eol")
@@ -208,7 +208,7 @@ matrixKeypad.keypad.onEvent(5, 3, MatrixKeypadButtonEvent.Click, function () {
 })
 matrixKeypad.keypad.onEvent(3, 2, MatrixKeypadButtonEvent.Click, function () {
     keyboard.type("t")
-    light.setPixelColor(19, 0xffff00)
+    light.setPixelColor(19, 0x007fff)
     pause(100)
     keyboard.type("!")
     keyboard.type("remove")
@@ -243,7 +243,7 @@ matrixKeypad.keypad.onEvent(6, 0, MatrixKeypadButtonEvent.Up, function () {
 })
 matrixKeypad.keypad.onEvent(7, 3, MatrixKeypadButtonEvent.Click, function () {
     keyboard.type("t")
-    light.setPixelColor(31, 0xffff00)
+    light.setPixelColor(31, 0x007fff)
     pause(100)
     keyboard.type("!")
     keyboard.type("dq")
@@ -261,7 +261,7 @@ matrixKeypad.keypad.onEvent(4, 2, MatrixKeypadButtonEvent.Up, function () {
 })
 matrixKeypad.keypad.onEvent(6, 3, MatrixKeypadButtonEvent.Click, function () {
     keyboard.type("t")
-    light.setPixelColor(30, 0xffff00)
+    light.setPixelColor(30, 0x007fff)
     pause(100)
     keyboard.type("!")
     keyboard.type("black")
@@ -282,15 +282,15 @@ NUMFLASH = 0
 pause(2000)
 forever(function () {
     if (NUMFLASH == 1) {
-        light.setPixelColor(20, 0xffff00)
-        light.setPixelColor(12, 0xffff00)
-        light.setPixelColor(4, 0xffff00)
-        light.setPixelColor(21, 0xffff00)
-        light.setPixelColor(13, 0xffff00)
-        light.setPixelColor(5, 0xffff00)
-        light.setPixelColor(22, 0xffff00)
-        light.setPixelColor(14, 0xffff00)
-        light.setPixelColor(6, 0xffff00)
-        light.setPixelColor(15, 0xffff00)
+        light.setPixelColor(20, 0xff8000)
+        light.setPixelColor(12, 0xff8000)
+        light.setPixelColor(4, 0xff8000)
+        light.setPixelColor(21, 0xff8000)
+        light.setPixelColor(13, 0xff8000)
+        light.setPixelColor(5, 0xff8000)
+        light.setPixelColor(22, 0xff8000)
+        light.setPixelColor(14, 0xff8000)
+        light.setPixelColor(6, 0xff8000)
+        light.setPixelColor(15, 0xff8000)
     }
 })
